@@ -1,6 +1,7 @@
 Release History
 ===============
 
+<<<<<<< HEAD
 [Release 5.2](https://github.com/CGAL/cgal/releases/tag/v5.2)
 -----------
 
@@ -15,11 +16,25 @@ Release date: December 2020
 -   Added the function `CGAL::halfspace_intersection_interior_point_3()` that can be used to retrieve
     the point that is the most interior a convex closed volume defined by the intersection of a set of halfspaces.
 
+<<<<<<< HEAD
 ### [Polygon Mesh Processing](https://doc.cgal.org/5.2/Manual/packages.html#PkgPolygonMeshProcessing)
 -   Added an option in `corefine()`, `split()` and `clip()` functions that enables the operation to be done on a mesh with
     self-intersections present in the intersection area.
+=======
+### [dD Geometry Kernel](https://doc.cgal.org/5.2/Manual/packages.html#PkgKernelD)
+
+-   The kernels [`Epick_d`](https://doc.cgal.org/5.2/Kernel_d/structCGAL_1_1Epick__d.html)
+    and [`Epeck_d`](https://doc.cgal.org/5.2/Kernel_d/structCGAL_1_1Epeck__d.html) gain two new functors:
+    [`Compute_power_product_d`](https://doc.cgal.org/5.2/Kernel_d/classCGAL_1_1Epeck__d_1_1Compute__power__product__d.html)
+    and [`Construct_power_sphere_d`](https://doc.cgal.org/5.2/Kernel_d/classCGAL_1_1Epeck__d_1_1Construct__power__sphere__d.html),
+    to deal with weighted points.
+
+>>>>>>> 8fc2d8208307a2f9735bac69b188d7ee32f08769
 
 [Release 5.1](https://github.com/CGAL/cgal/releases/tag/releases%2FCGAL-5.1)
+=======
+[Release 5.1](https://github.com/CGAL/cgal/releases/tag/v5.1)
+>>>>>>> 6db27e5db6787ffe75c4a833644c69f9ed4baedc
 -----------
 
 Release date: September 2020
