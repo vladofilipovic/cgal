@@ -32,8 +32,9 @@
 #endif
 
 #include <boost/iterator/function_output_iterator.hpp>
-#include <boost/type_traits/is_same.hpp>
-#include <boost/unordered_set.hpp>
+
+#include <unordered_set>
+#include <type_traits>
 
 /// \file Fixed_border_parameterizer_3.h
 
@@ -103,7 +104,7 @@ public:
     Circular_border_arc_length_parameterizer_3<TriangleMesh_> >::type  Border_parameterizer;
 
   #if !defined(CGAL_EIGEN3_ENABLED)
-  CGAL_static_assertion_msg(!(boost::is_same<SolverTraits_, Default>::value),
+  CGAL_static_assertion_msg(!(std::is_same<SolverTraits_, Default>::value),
                             "Error: You must either provide 'SolverTraits_' or link CGAL with the Eigen library");
   #endif
 
@@ -212,7 +213,7 @@ public:
 
     Error_code status = OK;
 
-    typedef boost::unordered_set<vertex_descriptor> Vertex_set;
+    typedef std::unordered_set<vertex_descriptor> Vertex_set;
     Vertex_set vertices;
 
     internal::Containers_filler<Triangle_mesh> fc(mesh, vertices);
@@ -248,7 +249,7 @@ public:
 
     // Fill the matrix for the inner vertices v_i: compute A's coefficient
     // w_ij for each neighbor j; then w_ii = - sum of w_ijs
-    boost::unordered_set<vertex_descriptor> main_border;
+    std::unordered_set<vertex_descriptor> main_border;
 
     for(vertex_descriptor v : vertices_around_face(bhd,mesh)){
       main_border.insert(v);
